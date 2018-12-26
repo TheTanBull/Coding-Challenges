@@ -1,3 +1,7 @@
+//INCOMPLETE -- See cashRegister2
+
+
+
 function checkCashRegister(price, cash, cid){
     var sum = 0;
     var change = JSON.stringify(cid);

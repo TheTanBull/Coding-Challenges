@@ -60,6 +60,6 @@ function telephoneCheck(str) {
     //   }
     // }
     // return false;
-  }
+  
   
   telephoneCheck("555-555-5555");
