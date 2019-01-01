@@ -1,4 +1,5 @@
-// Code by Jeff "Tan" Bullock @TheTanBull
+// Code by Jeff "Tan" Bullock 
+// @TheTanBull
 // Algorithm is going to handle prime numbers by 
 // dividing all candidates by integers from 2
 // to their square-root rounded up to the next integer
