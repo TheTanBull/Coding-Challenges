@@ -1,3 +1,6 @@
+// Code by Jeff "Tan" Bullock 
+// @TheTanBull
+
 // You are given two arrays and an index.
 
 // Use the array methods slice and splice to copy each element of the first array into the second array, in order.
