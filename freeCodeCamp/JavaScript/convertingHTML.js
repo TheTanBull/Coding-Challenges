@@ -1,3 +1,6 @@
+// Code by Jeff "Tan" Bullock 
+// @TheTanBull
+
 function convertHTML(str) {
     var map = {
         '"': '&quot;',
