@@ -1,3 +1,6 @@
+// Code by Jeff "Tan" Bullock 
+// @TheTanBull
+
 // Check if a value is classified as a boolean primitive. Return true or false.
 
 // Boolean primitives are true and false.
