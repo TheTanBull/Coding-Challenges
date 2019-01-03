@@ -2,25 +2,26 @@
 // @TheTanBull
 
 function sym() {
-    let symDifArr = [], sets = [];
+    var cleanArray = [], sets = [], symDifArr = []; // Array to handle duplicates
     var argsArray = Array.prototype.slice.call(arguments, 0);
-    //console.log(argsArray);
-    // argsArray.forEach(function(b){
-    //     var counts = [];
-    //     for(var n = 0; n < b.length; n++){
-    //         if(counts[b[n]] === undefined){
-    //             counts[b[n]] = 1;
-    //         } else {
-    //             b.
-    //         }
-    //     }
-    // });
-    argsArray.forEach(function(a){
+    argsArray.forEach(function(argsIndex){
+        //console.log(argsIndex);
+        var numExistsArr = [];
+        tempArray = argsIndex.filter(function(n){
+            if(numExistsArr.indexOf(n) == -1){
+                numExistsArr.push(n);
+                return true;
+            }
+        });
+        cleanArray.push(tempArray);
+    });
+
+    cleanArray.forEach(function(a){
         //console.log(a);
         sets.push(new Set(a));
     });
     //console.log(sets);
-    argsArray.forEach(function(arr, index){
+    cleanArray.forEach(function(arr, index){
         //console.log(arr);
         arr.forEach(function(e){
             //console.log(e);
@@ -46,6 +47,9 @@ function sym() {
     });
     console.log(symDifArr);
     return symDifArr;
+  
+
+    
   }
   
-  sym([1, 2, 3], [5, 2, 1, 4]);
+  sym([1, 2, 3], [5, 5, 2, 1, 4]);
