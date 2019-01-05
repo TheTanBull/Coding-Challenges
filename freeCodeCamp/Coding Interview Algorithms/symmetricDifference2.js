@@ -4,6 +4,8 @@
 function sym() {
     var cleanArray = [], sets = [], symDifArr = []; // Array to handle duplicates
     var argsArray = Array.prototype.slice.call(arguments, 0);
+    // This block of code will return each array with
+    // no duplicates.
     argsArray.forEach(function(argsIndex){
         //console.log(argsIndex);
         var numExistsArr = [];
