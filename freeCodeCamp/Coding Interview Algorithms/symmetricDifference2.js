@@ -18,6 +18,7 @@ function sym() {
         cleanArray.push(tempArray);
     });
 
+    
     cleanArray.forEach(function(arrayIndex){
         sets.push(new Set(arrayIndex));
     })
