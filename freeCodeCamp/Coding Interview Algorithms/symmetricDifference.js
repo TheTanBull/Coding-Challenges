@@ -1,6 +1,6 @@
 // Code by Jeff "Tan" Bullock 
 // @TheTanBull
-
+//Not Finished
 function sym() {
     let symDifArr = [], sets = [];
     var argsArray = Array.prototype.slice.call(arguments, 0);
