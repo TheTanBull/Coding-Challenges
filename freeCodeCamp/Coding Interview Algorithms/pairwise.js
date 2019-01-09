@@ -6,7 +6,7 @@ function pairwise(arr, arg) {
     for(var i = 0; i < arr.length; i++){
         for(var j = i + 1; j < arr.length; j++){
             if(arr[i] + arr[j] === arg){
-                if(indexMatch.indexOf(arr[i] == -1)){
+                if(indexMatch.indexOf(i) === -1){
                     indexMatch.push(i);
                     indexMatch.push(j);
                 }
@@ -22,4 +22,4 @@ function pairwise(arr, arg) {
     return indexSum;
   }
   
-  pairwise([1,1,1], 2);
+  pairwise([0,0,0,0,1,1], 1);
