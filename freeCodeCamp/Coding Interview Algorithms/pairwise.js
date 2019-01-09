@@ -6,19 +6,19 @@ function pairwise(arr, arg) {
     for(var i = 0; i < arr.length; i++){
         for(var j = i + 1; j < arr.length; j++){
             if(arr[i] + arr[j] === arg){
-                if(indexMatch.indexOf(i) === -1){
+                if(indexMatch.indexOf(i) === -1 && indexMatch.indexOf(j) === -1){
                     indexMatch.push(i);
                     indexMatch.push(j);
                 }
-                console.log("True");
+                //console.log("True");
             }
         }
     }
-    console.log(indexMatch);
+    //console.log(indexMatch);
     var indexSum = indexMatch.reduce(function(a, b) {
         return a + b;
     }, 0);
-    console.log(indexSum);
+    //console.log(indexSum);
     return indexSum;
   }
   
