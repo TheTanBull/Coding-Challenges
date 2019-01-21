@@ -36,7 +36,7 @@ var addTwoNumbersFirst = function(l1, l2) {
 };
 /********************************************/
 
-
+//First Attempt 208ms trial time
 var addTwoNumbers = function(l1, l2) {
     var l3 = {}, cNode1 = l1, cNode2 = l2, cNode3 = l3;
     var carry = false;
@@ -120,7 +120,7 @@ var addTwoNumbers = function(l1, l2) {
     console.log(l3);
     return l3;
 }
-
+//******************************************/
 
 
 addTwoNumbers({
