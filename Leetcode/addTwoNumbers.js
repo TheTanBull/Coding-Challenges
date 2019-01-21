@@ -51,8 +51,12 @@ var addTwoNumbers = function(l1, l2) {
             carry = true;
         } else {
             if(carry){
-                cNode3.val = cNode1.val + cNode2.val + 1;
-                carry = false;
+                if(cNode1.val + cNode2.val + 1 === 10){
+                    cNode3.val = 0;
+                } else{
+                    cNode3.val = cNode1.val + cNode2.val + 1;
+                    carry = false;
+                }
             } else{
                 cNode3.val = cNode1.val + cNode2.val;
             }
