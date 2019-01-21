@@ -1,7 +1,7 @@
 // Code by Jeff "Tan" Bullock 
 // @TheTanBull
 
-var addTwoNumbers = function(l1, l2) {
+var addTwoNumbersFirst = function(l1, l2) {
     var currentNode = l1;
     var l1String = "", l2String = "", lTotal;
     while(currentNode){
@@ -32,10 +32,92 @@ var addTwoNumbers = function(l1, l2) {
         }
         currentNode = currentNode.next;
     }
-
-    //console.log(l3);
     return l3;
 };
+/********************************************/
+
+
+var addTwoNumbers = function(l1, l2) {
+    var l3 = {}, cNode1 = l1, cNode2 = l2, cNode3 = l3;
+    var carry = false;
+
+    while(cNode1 && cNode2){
+        if(cNode1.val + cNode2.val >= 10){
+            if(carry){
+                cNode3.val = cNode1.val + cNode2.val - 9;
+            } else{
+                cNode3.val = cNode1.val + cNode2.val - 10;
+            }
+            carry = true;
+        } else {
+            if(carry){
+                cNode3.val = cNode1.val + cNode2.val + 1;
+                carry = false;
+            } else{
+                cNode3.val = cNode1.val + cNode2.val;
+            }
+        }
+        
+        cNode1 = cNode1.next;
+        cNode2 = cNode2.next;
+        if(cNode1 || cNode2){
+            cNode3.next = {};
+            cNode3 = cNode3.next;
+        }else{
+            cNode3.next = null;
+        }
+    }
+
+    while(cNode1){
+        if(carry){
+            if(cNode1.val === 9){
+                cNode3.val = 0;
+            } else {
+                cNode3.val = cNode1.val + 1;
+                carry = false;
+            }
+        } else {
+            cNode3.val = cNode1.val;
+        }
+        cNode1 = cNode1.next;
+        if(cNode1){
+            cNode3.next = {};
+            cNode3 = cNode3.next;
+        }else{
+            cNode3.next = null;
+        }
+    }
+    while(cNode2){
+        if(carry){
+            if(cNode2.val === 9){
+                cNode3.val = 0;
+            } else {
+                cNode3.val = cNode2.val + 1;
+                carry = false;
+            }
+        } else {
+            cNode3.val = cNode2.val;
+        }
+        cNode2 = cNode2.next;
+        if(cNode2){
+            cNode3.next = {};
+            cNode3 = cNode3.next;
+        }else{
+            cNode3.next = null;
+        }
+    }
+
+    if(carry){
+        cNode3.next = {
+            val: 1,
+            next: null
+        }
+    }
+    console.log(l3);
+    return l3;
+}
+
+
 
 addTwoNumbers({
     val: 2,
@@ -53,7 +135,10 @@ addTwoNumbers({
         val: 6,
         next: {
             val: 4,
-            next: null
+            next: {
+                val: 8,
+                next: null
+            }
         }
     }
 });
