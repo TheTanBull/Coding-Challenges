@@ -19,11 +19,6 @@ var lengthOfLongestSubstring = function(s) {
         }
     }
 
-    letterMap.forEach(function(val, key){
-        if(s.length - val > longest){
-            longest = s.length - val;
-        }
-    })
     if(longest === 0){
         longest = s.length;
     }
