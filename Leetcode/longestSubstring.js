@@ -4,9 +4,9 @@
 
 var lengthOfLongestSubstring = function(s) {
     var letterMap = new Map();
-    var longest = 0, count = 0, sIndex = 0;
-    for (var i = 0; i < s.length; i++){
-        console.log(s[i] + " " + i);
+    var count = 0, longest = 0, subLength = 0, sIndex = 0;
+    for (var i = 0; i <= s.length; i++){
+        //console.log(s[i] + " " + i);
         if(letterMap.has(s[i])){
             count = i - letterMap.get(s[i]);
             letterMap.set(s[i], i);
@@ -18,8 +18,17 @@ var lengthOfLongestSubstring = function(s) {
             letterMap.set(s[i], i);
         }
     }
+
+    letterMap.forEach(function(val, key){
+        if(s.length - val > longest){
+            longest = s.length - val;
+        }
+    })
+    if(longest === 0){
+        longest = s.length;
+    }
     console.log(longest);
     return longest;
 }
 
-lengthOfLongestSubstring("asdfghjasdfghj");
+lengthOfLongestSubstring(" a ab");
