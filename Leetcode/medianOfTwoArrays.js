@@ -71,6 +71,9 @@ var findMedianSortedArrays = function(nums1, nums2) {
         }
     }
     if(totalCount % 2 === 0){
+        if(med1 === 0 || med2 === 0){
+
+        }
         if(leftCount > rightCount){
 
         }
@@ -78,4 +81,4 @@ var findMedianSortedArrays = function(nums1, nums2) {
     console.log("Median 1: " + med1 + " Median 2: " + med2);
     console.log("Left Count: " + leftCount + " Right Count: " + rightCount);
 }
-findMedianSortedArrays([1,2,4,5], [3]);
+findMedianSortedArrays([1,2,4,5], [3, 4, 5, 6, 7]);
