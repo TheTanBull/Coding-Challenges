@@ -13,4 +13,4 @@ var reverseString = function(s) {
     console.log(s);
 };
 
-reverseString(["H","E","L","P","O","A"]);
+reverseString("HELLO");
