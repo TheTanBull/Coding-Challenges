@@ -8,7 +8,7 @@
  * @return {string[]}
  */
 
-var fizzBuzz = function(n) {
+var fizzBuzzI = function(n) {
     var output = [];
     if(n >= 1){
         for(var i = 1; i <= n; i++){
@@ -27,4 +27,11 @@ var fizzBuzz = function(n) {
     return output;
 };
 
+
+//Using ternary operator
+var fizzBuzz = function(n) {
+    output = [];
+    for(let i=0;i<n;)output[i]=((++i%3?'':'Fizz')+(i%5?'':'Buzz')||i + "")
+    return output;
+}
 fizzBuzz(15);
