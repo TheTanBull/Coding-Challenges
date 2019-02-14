@@ -4,9 +4,9 @@
 
 function isEmptyObject(obj) {
     for (var key in obj) {
-        return true;
+        return false;
     }
-    return false;
+    return true;
 }
 
 var isAnagram = function(s, t) {
