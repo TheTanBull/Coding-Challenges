@@ -2,7 +2,7 @@
 // @TheTanBull
 
 var addTwoNumbersFirst = function(l1, l2) {
-    
+
     var currentNode = l1;
     var l1String = "", l2String = "", lTotal;
     while(currentNode){
@@ -33,7 +33,9 @@ var addTwoNumbersFirst = function(l1, l2) {
         }
         currentNode = currentNode.next;
     }
+
     return l3;
+    
 };
 /********************************************/
 
