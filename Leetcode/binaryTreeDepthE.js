@@ -2,6 +2,7 @@
 // @TheTanBull
 
 var maxDepth = function(root) {
+
     let max = -1;
     const getMaxLevel = (node, depth=0) => {
       if (node) {
@@ -11,5 +12,7 @@ var maxDepth = function(root) {
       }
     }
     getMaxLevel(root);
+
     return max + 1;
+    
   };
